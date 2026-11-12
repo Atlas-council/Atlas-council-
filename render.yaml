@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: atlas-council
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/status
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        sync: false
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: DEEPSEEK_MODEL
+        sync: false
+      - key: XAI_API_KEY
+        sync: false
+      - key: XAI_MODEL
+        sync: false
